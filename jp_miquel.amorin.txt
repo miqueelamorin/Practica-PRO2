@@ -1,0 +1,453 @@
+----entrada comentada----
+
+//Lectura del conjunto inicial de categorías
+
+4 8
+Grand_Slam
+Masters_1000
+ATP_Challenger
+ATP_500
+2000 1200 720 360 180 90 45 10
+1000  600 360 180  90 45 10  0
+  50   30  15   7   4  0  0  0
+ 250  150  90  45  20  0  0  0
+
+//Lectura del conjunto inicial de torneos
+
+5
+Wimbledon 1
+French_Open 2
+Weissenhof 3
+Australia_Open 4
+Montecarlo 2
+
+//Lectura del conjunto inicial de jugadores
+
+40
+Aguilera
+Albert
+Alcaraz
+Almagro
+Alonso
+Andújar
+Arrese
+Bautista
+Berasategui
+Blanco
+Bruguera
+Burillo
+Calatrava
+Carbonell
+Carlos
+Carreño
+Casal
+Clavet
+Corretja
+Costa
+Davidovich
+Ferrer
+García-López
+Gimeno
+Gisbert
+Granollers
+Hernández
+Higueras
+López
+Luna
+Mantilla
+Martín
+Martínez
+Montañés
+Moyá
+Nadal
+Orantes
+Portas
+Ramírez
+Ramos
+
+//Iniciamos el torneo Australia_Open
+
+iniciar_torneo Australia_Open
+14
+ 4 5 6 13 15 17 20 24 25 26 27 31 33 37
+
+//Damos de baja del conjunto de jugadores 6 jugadores que participan en este torneo ya iniciado
+
+bj Almagro
+bj Andújar
+bj Carlos
+bj Gimeno
+bj Granollers
+bj Orantes
+
+//Finalizamos el torneo Australia_Open
+//Y comprovamos si al finalizar el torneo no da error por intentar sumar puntos y estadisticas a jugadores inexistentes
+
+finalizar_torneo Australia_Open
+
+4-6,6-3,4-6
+6-3,7-6
+6-2,6-4
+0
+6-3,6-7,6-7
+0 0
+6-7,6-2,6-2
+5-7,3-6
+0 0
+7-5,7-6
+0 0
+7-6,4-6,6-7
+7-5,7-5
+0
+3-6,7-6,7-5
+0 0
+7-5,7-5
+6-1,6-2
+0 0
+0-1
+0 0
+
+//Consultamos los jugadores previamente dados de baja para comprovar que siguen sin existir en el conjunto
+
+cj Almagro
+cj Andújar
+cj Carlos
+cj Gimeno
+cj Granollers
+cj Orantes
+cj Costa
+
+//Iniciamos el torneo Wimbledon
+
+iniciar_torneo Wimbledon
+16
+ 1 2 3 7 8 9 10 11 12 14 16 18 19 21 22 23
+
+//Lo finalizamos con la intención de hacer ganar al jugador Aguilera con todos los resultados de los partidos
+//que juega siendo 1-0 o 0-1 y asi que gane el torneo sin ninguna estadistica de juegos o sets ganados y perdidos
+
+finalizar_torneo Wimbledon
+0-1
+6-2,7-5
+6-3,6-3
+6-4,6-1
+0 0
+4-6,7-5,6-3
+0 0
+6-2,7-6
+6-1,6-1
+0 0
+6-1,6-4
+0 0
+0-1
+5-7,3-6
+7-5,7-5
+0 0
+3-6,7-6,7-5
+0 0
+0-1
+6-4,7-6
+0 0
+1-0
+0 0
+
+//Consultamos al ganador para comprovar que no tiene ninguna estadistica al finalizar y ganar el torneo
+//También consultamos otro jugador que ha participado para ver que, en un partido con resultado normal se suman estadísticas
+
+cj Aguilera
+cj Alonso
+fin
+
+
+----entrada sin comentar----
+
+4 8
+Grand_Slam
+Masters_1000
+ATP_Challenger
+ATP_500
+2000 1200 720 360 180 90 45 10
+1000  600 360 180  90 45 10  0
+  50   30  15   7   4  0  0  0
+ 250  150  90  45  20  0  0  0
+5
+Wimbledon 1
+French_Open 2
+Weissenhof 3
+Australia_Open 4
+Montecarlo 2
+40
+Aguilera
+Albert
+Alcaraz
+Almagro
+Alonso
+Andújar
+Arrese
+Bautista
+Berasategui
+Blanco
+Bruguera
+Burillo
+Calatrava
+Carbonell
+Carlos
+Carreño
+Casal
+Clavet
+Corretja
+Costa
+Davidovich
+Ferrer
+García-López
+Gimeno
+Gisbert
+Granollers
+Hernández
+Higueras
+López
+Luna
+Mantilla
+Martín
+Martínez
+Montañés
+Moyá
+Nadal
+Orantes
+Portas
+Ramírez
+Ramos
+iniciar_torneo Australia_Open
+14
+ 4 5 6 13 15 17 20 24 25 26 27 31 33 37
+bj Almagro
+bj Andújar
+bj Carlos
+bj Gimeno
+bj Granollers
+bj Orantes
+finalizar_torneo Australia_Open
+4-6,6-3,4-6
+6-3,7-6
+6-2,6-4
+0
+6-3,6-7,6-7
+0 0
+6-7,6-2,6-2
+5-7,3-6
+0 0
+7-5,7-6
+0 0
+7-6,4-6,6-7
+7-5,7-5
+0
+3-6,7-6,7-5
+0 0
+7-5,7-5
+6-1,6-2
+0 0
+0-1
+0 0
+cj Almagro
+cj Andújar
+cj Carlos
+cj Gimeno
+cj Granollers
+cj Orantes
+cj Costa
+iniciar_torneo Wimbledon
+16
+ 1 2 3 7 8 9 10 11 12 14 16 18 19 21 22 23
+finalizar_torneo Wimbledon
+0-1
+6-2,7-5
+6-3,6-3
+6-4,6-1
+0 0
+4-6,7-5,6-3
+0 0
+6-2,7-6
+6-1,6-1
+0 0
+6-1,6-4
+0 0
+0-1
+5-7,3-6
+7-5,7-5
+0 0
+3-6,7-6,7-5
+0 0
+0-1
+6-4,7-6
+0 0
+1-0
+0 0
+cj Aguilera
+cj Alonso
+fin
+
+
+----salida comentada----
+
+//Se inicia el torneo Australia_Open y se imprime el árbol de emparejamientos
+
+#iniciar_torneo Australia_Open
+(((1.Almagro (8.Gimeno 9.Gisbert)) ((4.Calatrava 13.Martínez) (5.Carlos 12.Mantilla))) ((2.Alonso (7.Costa 10.Granollers)) ((3.Andújar 14.Orantes) (6.Casal 11.Hernández))))
+
+//Damos de baja a diversos jugadores que juegan en el torneo y imprimimos el numero total de jugadores del ranking
+
+#bj Almagro
+39
+#bj Andújar
+38
+#bj Carlos
+37
+#bj Gimeno
+36
+#bj Granollers
+35
+#bj Orantes
+34
+
+//Se finaliza el torneo Australia_Open, se imprime el árbol de resultados y el ranking local del torneo con los puntos ganados por cada jugador
+
+#finalizar_torneo Australia_Open
+(1.Almagro vs 3.Andújar 4-6,6-3,4-6(1.Almagro vs 13.Martínez 6-3,7-6(1.Almagro vs 9.Gisbert 6-2,6-4(8.Gimeno vs 9.Gisbert 6-3,6-7,6-7))(13.Martínez vs 5.Carlos 6-7,6-2,6-2(4.Calatrava vs 13.Martínez 5-7,3-6)(5.Carlos vs 12.Mantilla 7-5,7-6)))(2.Alonso vs 3.Andújar 7-6,4-6,6-7(2.Alonso vs 7.Costa 7-5,7-5(7.Costa vs 10.Granollers 3-6,7-6,7-5))(3.Andújar vs 11.Hernández 7-5,7-5(3.Andújar vs 14.Orantes 6-1,6-2)(6.Casal vs 11.Hernández 0-1))))
+1.Almagro 150
+2.Alonso 90
+3.Andújar 250
+4.Calatrava 20
+5.Carlos 45
+6.Casal 20
+7.Costa 45
+8.Gimeno 20
+9.Gisbert 45
+10.Granollers 20
+11.Hernández 45
+12.Mantilla 20
+13.Martínez 90
+14.Orantes 20
+
+//Se consultan los jugadores eliminados antes de finalizar el torneo para comprovar que no existan.
+//También se consulta un jugador que si exista como referencia
+
+#cj Almagro
+error: el jugador no existe
+#cj Andújar
+error: el jugador no existe
+#cj Carlos
+error: el jugador no existe
+#cj Gimeno
+error: el jugador no existe
+#cj Granollers
+error: el jugador no existe
+#cj Orantes
+error: el jugador no existe
+#cj Costa
+Costa Rk:3 Ps:45 Ts:1 WM:1 LM:1 WS:2 LS:3 WG:27 LG:31
+
+//Se inicia otro torneo con nombre Wimbledon y se imprime el árbol de emparejamientos
+
+#iniciar_torneo Wimbledon
+((((1.Alonso 16.Ferrer) (8.Alcaraz 9.Arrese)) ((4.Casal 13.Carreño) (5.Mantilla 12.Carbonell))) (((2.Martínez 15.Davidovich) (7.Albert 10.Berasategui)) ((3.Costa 14.Corretja) (6.Aguilera 11.Bruguera))))
+
+//Lo finalizamos y damos los resultados de manera que todos los partidos que juegue el jugador numero 6 sean del tipo "1-0" o "0-1" y éste sea el ganador del torneo. Así habrá ganado el torneo pero sin estadísticas de juegos o sets ganados y perdidos.
+
+#finalizar_torneo Wimbledon
+(1.Alonso vs 6.Aguilera 0-1(1.Alonso vs 4.Casal 6-2,7-5(1.Alonso vs 8.Alcaraz 6-3,6-3(1.Alonso vs 16.Ferrer 6-4,6-1)(8.Alcaraz vs 9.Arrese 4-6,7-5,6-3))(4.Casal vs 5.Mantilla 6-2,7-6(4.Casal vs 13.Carreño 6-1,6-1)(5.Mantilla vs 12.Carbonell 6-1,6-4)))(7.Albert vs 6.Aguilera 0-1(2.Martínez vs 7.Albert 5-7,3-6(2.Martínez vs 15.Davidovich 7-5,7-5)(7.Albert vs 10.Berasategui 3-6,7-6,7-5))(3.Costa vs 6.Aguilera 0-1(3.Costa vs 14.Corretja 6-4,7-6)(6.Aguilera vs 11.Bruguera 1-0))))
+1.Alonso 1200
+2.Martínez 360
+3.Costa 360
+4.Casal 720
+5.Mantilla 360
+6.Aguilera 2000
+7.Albert 720
+8.Alcaraz 360
+9.Arrese 180
+10.Berasategui 180
+11.Bruguera 180
+12.Carbonell 180
+13.Carreño 180
+14.Corretja 180
+15.Davidovich 180
+16.Ferrer 180
+
+//Consultamos el jugador ganador para verificar que sus estadisticas estan a 0 pero se le han sumado los puntos ganados en el torneo
+//También se consulta otro jugador que ha jugado el torneo pero con resultados normales como referéncia
+
+#cj Aguilera
+Aguilera Rk:1 Ps:2000 Ts:1 WM:4 LM:0 WS:0 LS:0 WG:0 LG:0
+#cj Alonso
+Alonso Rk:2 Ps:1290 Ts:2 WM:4 LM:2 WS:9 LS:2 WG:68 LG:47
+
+
+----salida sin comentar----
+
+#iniciar_torneo Australia_Open
+(((1.Almagro (8.Gimeno 9.Gisbert)) ((4.Calatrava 13.Martínez) (5.Carlos 12.Mantilla))) ((2.Alonso (7.Costa 10.Granollers)) ((3.Andújar 14.Orantes) (6.Casal 11.Hernández))))
+#bj Almagro
+39
+#bj Andújar
+38
+#bj Carlos
+37
+#bj Gimeno
+36
+#bj Granollers
+35
+#bj Orantes
+34
+#finalizar_torneo Australia_Open
+(1.Almagro vs 3.Andújar 4-6,6-3,4-6(1.Almagro vs 13.Martínez 6-3,7-6(1.Almagro vs 9.Gisbert 6-2,6-4(8.Gimeno vs 9.Gisbert 6-3,6-7,6-7))(13.Martínez vs 5.Carlos 6-7,6-2,6-2(4.Calatrava vs 13.Martínez 5-7,3-6)(5.Carlos vs 12.Mantilla 7-5,7-6)))(2.Alonso vs 3.Andújar 7-6,4-6,6-7(2.Alonso vs 7.Costa 7-5,7-5(7.Costa vs 10.Granollers 3-6,7-6,7-5))(3.Andújar vs 11.Hernández 7-5,7-5(3.Andújar vs 14.Orantes 6-1,6-2)(6.Casal vs 11.Hernández 0-1))))
+1.Almagro 150
+2.Alonso 90
+3.Andújar 250
+4.Calatrava 20
+5.Carlos 45
+6.Casal 20
+7.Costa 45
+8.Gimeno 20
+9.Gisbert 45
+10.Granollers 20
+11.Hernández 45
+12.Mantilla 20
+13.Martínez 90
+14.Orantes 20
+#cj Almagro
+error: el jugador no existe
+#cj Andújar
+error: el jugador no existe
+#cj Carlos
+error: el jugador no existe
+#cj Gimeno
+error: el jugador no existe
+#cj Granollers
+error: el jugador no existe
+#cj Orantes
+error: el jugador no existe
+#cj Costa
+Costa Rk:3 Ps:45 Ts:1 WM:1 LM:1 WS:2 LS:3 WG:27 LG:31
+#iniciar_torneo Wimbledon
+((((1.Alonso 16.Ferrer) (8.Alcaraz 9.Arrese)) ((4.Casal 13.Carreño) (5.Mantilla 12.Carbonell))) (((2.Martínez 15.Davidovich) (7.Albert 10.Berasategui)) ((3.Costa 14.Corretja) (6.Aguilera 11.Bruguera))))
+#finalizar_torneo Wimbledon
+(1.Alonso vs 6.Aguilera 0-1(1.Alonso vs 4.Casal 6-2,7-5(1.Alonso vs 8.Alcaraz 6-3,6-3(1.Alonso vs 16.Ferrer 6-4,6-1)(8.Alcaraz vs 9.Arrese 4-6,7-5,6-3))(4.Casal vs 5.Mantilla 6-2,7-6(4.Casal vs 13.Carreño 6-1,6-1)(5.Mantilla vs 12.Carbonell 6-1,6-4)))(7.Albert vs 6.Aguilera 0-1(2.Martínez vs 7.Albert 5-7,3-6(2.Martínez vs 15.Davidovich 7-5,7-5)(7.Albert vs 10.Berasategui 3-6,7-6,7-5))(3.Costa vs 6.Aguilera 0-1(3.Costa vs 14.Corretja 6-4,7-6)(6.Aguilera vs 11.Bruguera 1-0))))
+1.Alonso 1200
+2.Martínez 360
+3.Costa 360
+4.Casal 720
+5.Mantilla 360
+6.Aguilera 2000
+7.Albert 720
+8.Alcaraz 360
+9.Arrese 180
+10.Berasategui 180
+11.Bruguera 180
+12.Carbonell 180
+13.Carreño 180
+14.Corretja 180
+15.Davidovich 180
+16.Ferrer 180
+#cj Aguilera
+Aguilera Rk:1 Ps:2000 Ts:1 WM:4 LM:0 WS:0 LS:0 WG:0 LG:0
+#cj Alonso
+Alonso Rk:2 Ps:1290 Ts:2 WM:4 LM:2 WS:9 LS:2 WG:68 LG:47
